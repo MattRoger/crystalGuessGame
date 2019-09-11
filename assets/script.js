@@ -1,10 +1,14 @@
-var targetScore=30;
 
-$("#number-to-guess").text(targetScore);
 
+
+var targetScore=[Math.floor(Math.random(120-50)*100)+50]
 var score=0;
 
-var numberOptions = [10, 5, 3, 7];
+
+
+$("#number-to-guess").text(targetScore);
+// $("#current-score").text(score);
+
 
 for (var i = 0; i < 4; i++){
     var imageCrystal = $("<img>");
@@ -23,18 +27,19 @@ for (var i = 0; i < 4; i++){
 
     imageCrystal.addClass("crystal-image");
     imageCrystal.attr("src", crystalArray[Math.floor(Math.random()*crystalArray.length)] );
-    
-    imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+    var valueCrystal=[Math.floor(Math.random(20-10)*10)+1];
+    imageCrystal.attr("data-crystalvalue", valueCrystal);
     $("#crystals").append(imageCrystal);
 }
 
-// var increment = numOptions[Math.round(Math.random())];
 
 $(".crystal-image").on("click", function(){
     
     var crystalValue = ($(this).attr("data-crystalvalue"));
     crystalValue = parseInt(crystalValue);
-    score += increment;
+    score += crystalValue;
+    $("#current-score").append(score);
+    
     alert("your new score is " + score);
     if (score===targetScore){
         alert("you win")
