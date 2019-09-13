@@ -20,8 +20,8 @@ $("#opening-modal-id").css({display: "none"})
 
 
 var score=0;
-var targetScore= 50;
-// [Math.floor(Math.random()*(120-50))+50]
+
+var targetScore=[Math.floor(Math.random()*(120-50))+50];
 
 
 $("#number-to-guess").text("Kalaxian Purity Target "+ targetScore);
@@ -45,8 +45,7 @@ for (var i = 0; i < 4; i++){
 
     imageCrystal.addClass("crystal-image");
     imageCrystal.attr("src", crystalArray[Math.floor(Math.random()*crystalArray.length)] );
-    var valueCrystal=25;
-    // [Math.floor(Math.random()*(12-1)+1)];
+    var valueCrystal= [Math.floor(Math.random()*(12-1)+1)];
     imageCrystal.attr("data-crystalvalue", valueCrystal);
     $("#crystals").append(imageCrystal);
 }
@@ -59,7 +58,6 @@ $(".crystal-image").on("click", function(){
     score += crystalValue;
     $("#current-score").text("Kalaxian Purity " + score);
     
-    alert("your new score is " + score);
     if (score==targetScore){
         winner();
     }else if(score>targetScore){
@@ -69,7 +67,13 @@ $(".crystal-image").on("click", function(){
 })
 
 function winner(){
-    $("#winner-modal-id").css({display: "block"})}
-
+    $("#winner-modal-id").css({display: "block"})
+    $(".game-bar").css({display:"none"})
+    $(".crystal-wrapper").css({display:"none"})
+    
+}
 function loser(){
-    $("#loser-modal-id").css({display: "block"})}
+    $("#loser-modal-id").css({display: "block"})
+    $(".game-bar").css({display:"none"})
+    $(".crystal-wrapper").css({display:"none"})
+}

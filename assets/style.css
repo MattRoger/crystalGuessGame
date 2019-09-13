@@ -12,31 +12,39 @@ body{
     background-position-x: 45%;
   }
  .game-bar{
-  background: teal;
-  color:white;
+  background:#0B7A75;
+  color:#31CB00;
   width:50%;
   margin-left:6%;
  } 
   .crystal-image {
-      width: 300px;
-      height: 300px;
+      width: 35%;
+      margin:0 auto;
+      padding-left:10%;
     }
+   
 
     .crystal-wrapper{
-      background: wheat;
+      background:#7C7C7C;
+      border:1.5rem solid #595959;
       width:50%;
       margin-left:6%;
   
     }
+    h1,
     h2{
       font-family: 'Orbitron', sans-serif;
-      font-size: 1.75em;
-      /* letter-spacing: 1rem; */
+      font-size: 2.0em;
+      
     }
+   
+  
+    
     p{
       font-family: 'NTR', sans-serif;
-      font-size: 1.25em;
+      font-size: 1.5em;
       line-height: 1.25em;
+      font-weight: 600;
     }
 
     /* model css */
@@ -60,7 +68,6 @@ body{
       display: inline-block;
       margin:15% auto;
       padding:20px;
-      border:1px solid black;
       width:80%;
     }
     .open-modal-img{
@@ -68,53 +75,73 @@ body{
       float: left;
     }
     .game-rules{
-   
-      background:white;
-      
+      width:90%;
+      padding-left:5%;
+     color:#542A50;
+    }
+    .game-rules
+    h2{
+      text-align: center;  
+
     }
 
+
+   #play-again, 
     #play{
-      padding:5%;
-      margin: 0 auto;
-      color:salmon;
+      font-family: 'Orbitron', sans-serif;
+      padding:3% 5%;
+      font-size:2rem;
+      margin-left:20%;
+      color:#31CB00;
+      background: #52D1DC;
+      border:none;
     }
 
     .loser-modal{
       display: none;
-
+      background-image: url("../assets/images/youdied.jpg");
       z-index: 20;
       margin:auto;
-      background: red;
+      height:950px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+     
     }
 
     .loser-modal-content{
-      background:blueviolet;
-      margin:15% auto;
+     
+      color:#542A50;
       padding:20px;
-      border:1px solid black;
       width:80%;
     }
 
-    #play-again{
-      color:salmon;
-    }
+   
 
     .winner-modal{
       display: none;
-
-      z-index: 20;
-      margin:auto;
-      background: red;
+      z-index: 10;
+      margin-left:10%;
+      background:#262C3A;
+      height:950px;
+      color:#31CB00;
+      background-repeat: no-repeat;
+      background-size: 85%;
+      background-position-x: 25%
     }
-
+    .winner-inner{
+      margin-top:10%;
+      
+    }
     .winner-modal-content{
-      background:blueviolet;
-      margin:15% auto;
-      padding:20px;
-      border:1px solid black;
-      width:80%;
+ 
+      display:inline;
+      margin:25% auto;
+     
     }
 
-    #play-again{
-      color:salmon;
-    }
+   
+  .win-img{
+    float:left;
+    /* margin-top:10%; */
+    padding-right:3%;
+  }
