@@ -1,13 +1,32 @@
+$(document).ready(function(){
+$("#opening-modal-id").css({display: "block"})
+
+
+})
+
+$("#play").on("click",function(){
+    console.log("test")
+$("#opening-modal-id").css({display: "none"})
 
 
 
-var targetScore=[Math.floor(Math.random(120-50)*100)+50]
+
+
+
+
+
+
+
+
+
 var score=0;
+var targetScore= 50;
+// [Math.floor(Math.random()*(120-50))+50]
 
 
+$("#number-to-guess").text("Kalaxian Purity Target "+ targetScore);
 
-$("#number-to-guess").text(targetScore);
-// $("#current-score").text(score);
+
 
 
 for (var i = 0; i < 4; i++){
@@ -23,11 +42,11 @@ for (var i = 0; i < 4; i++){
         "assets/images/cr2_red.png",
         
     ]
-    // var randomCrystal = crystalArray[Math.floor(Math.random()*crystalArray/length)];
 
     imageCrystal.addClass("crystal-image");
     imageCrystal.attr("src", crystalArray[Math.floor(Math.random()*crystalArray.length)] );
-    var valueCrystal=[Math.floor(Math.random(20-10)*10)+1];
+    var valueCrystal=25;
+    // [Math.floor(Math.random()*(12-1)+1)];
     imageCrystal.attr("data-crystalvalue", valueCrystal);
     $("#crystals").append(imageCrystal);
 }
@@ -38,12 +57,19 @@ $(".crystal-image").on("click", function(){
     var crystalValue = ($(this).attr("data-crystalvalue"));
     crystalValue = parseInt(crystalValue);
     score += crystalValue;
-    $("#current-score").append(score);
+    $("#current-score").text("Kalaxian Purity " + score);
     
     alert("your new score is " + score);
-    if (score===targetScore){
-        alert("you win")
+    if (score==targetScore){
+        winner();
     }else if(score>targetScore){
-        alert("you lose!")
+        loser();
     }
 });
+})
+
+function winner(){
+    $("#winner-modal-id").css({display: "block"})}
+
+function loser(){
+    $("#loser-modal-id").css({display: "block"})}

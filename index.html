@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Crystal Guess Game</title>
-    <link rel="stylesheet" type="text/css" href="assets/style.css"/>
-  </head>
-  <body>
-    
-    <h1>Number to Guess: <span id="number-to-guess"></span></h1>
-    
-    <h2>Your Score: <span id="current-score"></span></h2>
-    <!-- Note that this div is now empty. We will fill it dynamically -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Crystal Guess Game</title>
+  <link href="https://fonts.googleapis.com/css?family=Megrim|NTR|Orbitron:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/style.css" />
+</head>
+
+<body>
+
+  <div id="opening-modal-id" class="opening-modal clearfix">
+    <div class="opening-modal-content ">
+      <img class="open-modal-img "src="assets/images/rick-morty.png" alt="rick and morty">
+      <section class="game-rules  ">
+        
+        <h2>Let's get  get Ricky Ricky wrecked</h2>
+        <p>Hey Morty! Let's keep this party going!!! With Kalaxian Crystals!!!! Morty, I need you to mixed up these four
+          crystals. </p>
+          <p>Each crystal will give us a certain
+            amount Kalaxian, we need just the right amount to get this party started! </p>
+            <p>Oh, Yeah, I should mention, too much and it will kill me. </p>
+            <button id="play">Play</button>
+          </section>
+          </div>
+        </div>
+        <div id="loser-modal-id" class="loser-modal">
+          <div class="loser-modal-content">
+            <p>Game direction</p>
+      <button id="play-again">Play Again</button>
+    </div>
+  </div>
+  <div id="winner-modal-id" class="winner-modal">
+    <div class="winner-modal-content">
+      <p>Game direction</p>
+      <button id="play-again">Play Again</button>
+    </div>
+  </div>
+  
+  
+
+  <div class="game-bar">
+    <h1> <span id="number-to-guess"></span></h1>
+    <h2> <span id="current-score"></span></h2>
+
+  </div>
+  <div class="crystal-wrapper">
     <div id="crystals"></div>
-    
-    
-    
-    <script  type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/script.js"> </script>
-    
+
+  </div>
+
+
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/script.js"> </script>
+
 </body>
+
 </html>

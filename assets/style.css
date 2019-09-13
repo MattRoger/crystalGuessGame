@@ -1,4 +1,120 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body{
+    background: #262C3A;
+    background-image:url("../assets/images/background.png");
+    background-repeat: no-repeat;
+    background-size:90%;
+    background-position-x: 45%;
+  }
+ .game-bar{
+  background: teal;
+  color:white;
+  width:50%;
+  margin-left:6%;
+ } 
   .crystal-image {
       width: 300px;
       height: 300px;
+    }
+
+    .crystal-wrapper{
+      background: wheat;
+      width:50%;
+      margin-left:6%;
+  
+    }
+    h2{
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.75em;
+      /* letter-spacing: 1rem; */
+    }
+    p{
+      font-family: 'NTR', sans-serif;
+      font-size: 1.25em;
+      line-height: 1.25em;
+    }
+
+    /* model css */
+
+  
+    
+
+    .opening-modal{
+      display: none;
+      z-index: 10;
+      margin-left:10%;
+      background:#262C3A;
+      height:950px;
+      background-image: url("../assets/images/portal.png");
+      background-repeat: no-repeat;
+      background-size: 85%;
+      background-position-x: 25%
+    }
+    
+    .opening-modal-content{
+      display: inline-block;
+      margin:15% auto;
+      padding:20px;
+      border:1px solid black;
+      width:80%;
+    }
+    .open-modal-img{
+      width:35%;
+      float: left;
+    }
+    .game-rules{
+   
+      background:white;
+      
+    }
+
+    #play{
+      padding:5%;
+      margin: 0 auto;
+      color:salmon;
+    }
+
+    .loser-modal{
+      display: none;
+
+      z-index: 20;
+      margin:auto;
+      background: red;
+    }
+
+    .loser-modal-content{
+      background:blueviolet;
+      margin:15% auto;
+      padding:20px;
+      border:1px solid black;
+      width:80%;
+    }
+
+    #play-again{
+      color:salmon;
+    }
+
+    .winner-modal{
+      display: none;
+
+      z-index: 20;
+      margin:auto;
+      background: red;
+    }
+
+    .winner-modal-content{
+      background:blueviolet;
+      margin:15% auto;
+      padding:20px;
+      border:1px solid black;
+      width:80%;
+    }
+
+    #play-again{
+      color:salmon;
     }
